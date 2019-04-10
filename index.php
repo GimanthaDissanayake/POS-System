@@ -1,8 +1,11 @@
-<?php
+<?php?>
+
+
 <!DOCTYPE html>
-<head></head>
+<head>
+    <title>POS SYSTEM</title>
+</head>
 <body>
     <p>This is a test</p>
 </body>
 </html>
-?>
