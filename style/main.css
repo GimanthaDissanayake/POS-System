@@ -1,0 +1,109 @@
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+
+.clearfix {
+  overflow: auto;
+}
+
+/* cashier */
+
+.cashier_header{
+
+	padding: 5px 5px 0px 5px;
+	/*background-color: #0099ff;
+	color: white; */
+	box-shadow: 10px 10px 8px #0099ff;
+
+}
+
+.cashier_topic{
+	font-size: 35px;
+	font-family: cursive;
+	color: #0099ff;
+	margin: 15px;
+	font-weight: bold;
+}
+
+div p.cashier_header_time{
+	margin: 20px ; 
+	font-size: 20px; 
+	color : #0099ff; 
+	font-family: Verdana,Geneva,'Bitstream Vera Sans','DejaVu Sans',sans-serif;
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+  color: #0099ff;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #0099ff;
+  color: white;
+}
+
+@keyframes .sidenav {
+  
+    0% {
+        margin-top: : 200px;
+    }
+}
+
+/* side bar */
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0099ff;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-top: 100px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #0099ff;
+  background-color: white;
+}
+
+/* main section */
+
+section.main{
+	width: 100%;
+	margin-left: 200px;
+	padding: 7px;
+	margin-top: 10px;
+	background-image: url(../img/main.jpg);
+	font-size: 100px;
+}
+
+h3.transections{
+	font-weight: normal;
+	/*text-decoration: underline;*/
+}
