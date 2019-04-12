@@ -1,23 +1,89 @@
+body{
+  margin: 0;
+  padding: 0;
+  padding-top: 90px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/*Sign in Page Background*/
 .bg{
-    background: url(../CSS/resources/login_background.jpg) no-repeat;
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
+  background: url(../CSS/resources/login_background.jpg) no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
 }
 
+/*Sign in box*/
 .form-container{
-    position: absolute;
-    top: 15vh;
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px #000;
+  position: absolute;
+  top: 15vh;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000;
 }
 
-.secondary_header {
-	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	background-color: #B3B3B3;
-	clear: left;
+/*Header*/
+.primary_header{
+    padding: 5px 5px 5px 5px;
+    font-size: 35px;
+	  font-family: 'Anton', arial, serif; 
+    color: #004d80;
+    background-color: #b3d9ff;
+    font-weight: bold;
+    border-bottom: 5px solid #004d80;
 }
+
+#logo {
+	vertical-align:middle;
+}
+.navbar-brand span {
+	font-size:2rem;
+	line-height:1.2;
+	font-weight: 200;
+	display:inline-block;
+	vertical-align:middle;
+	padding:0 0 0 15px;
+}
+
+/*Side Navigation Bar*/
+.sidenav{
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+}
+
+/*Footer*/
+.footer{
+	height: 80px;
+	background-color: black;
+}
+
+.f1{
+	text-align: center;
+	color: #0099ff;
+	font-weight: bold;
+	padding: 3px;
+	margin-bottom: 0px;
+}
+
+.f2{
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+
+.f3{
+	text-align: center;
+	color: white;
+}
+
+/*Content*/
+.tab-content{
+  padding-top: 20px;
+}
+
