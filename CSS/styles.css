@@ -37,6 +37,18 @@ body{
     border-bottom: 5px solid #004d80;
 }
 
+#logo {
+	vertical-align:middle;
+}
+.navbar-brand span {
+	font-size:2rem;
+	line-height:1.2;
+	font-weight: 200;
+	display:inline-block;
+	vertical-align:middle;
+	padding:0 0 0 15px;
+}
+
 /*Side Navigation Bar*/
 .sidenav{
   position: fixed;
@@ -68,5 +80,10 @@ body{
 .f3{
 	text-align: center;
 	color: white;
+}
+
+/*Content*/
+.tab-content{
+  padding-top: 20px;
 }
 
