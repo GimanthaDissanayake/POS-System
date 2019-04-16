@@ -5,7 +5,6 @@ function SignIn(){
   var txtpass=document.getElementById('password').value;
 
   firebase.auth().signInWithEmailAndPassword(txtuser, txtpass).catch(function(error) {
-    // Handle Errors here.
     window.alert(error.message)
     location.href="index.html";
   });
@@ -22,5 +21,15 @@ function SignIn(){
     else{
       console.log("not logged in");
     }
+  });
+}
+
+function SignOut()
+{
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    location.href="index.html";
+  }).catch(function(error) {
+    // An error happened.
   });
 }
