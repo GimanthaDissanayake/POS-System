@@ -19,16 +19,16 @@
     <div class="container-fluid bg">     
         <div class="row justify-content-center">
             <div class="col-12 col-sm-6 col-md-3">
-                <form class=form-container>
+                <div class=form-container>
                     <h2>Sign In</h2>
                     <div class="form-group">
-                        <input type="textbox" class="form-control" placeholder="Username" required>
+                        <input type="textbox" class="form-control" id="username" placeholder="Username" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                </form>
+                    <button type="submit" class="btn btn-primary btn-block" id="btnSubmit" onclick="SignIn()">Submit</button>
+                </div>
             </div>
         </div>
     </div>   
@@ -40,9 +40,29 @@
         </div>
     </footer>
 
+
+    
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCFgV_ID6n3BnIr4J1WhznAdB5iqjVm50Y",
+        authDomain: "pos-system-778dd.firebaseapp.com",
+        databaseURL: "https://pos-system-778dd.firebaseio.com",
+        projectId: "pos-system-778dd",
+        storageBucket: "pos-system-778dd.appspot.com",
+        messagingSenderId: "826306046330"
+    };
+    firebase.initializeApp(config);
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        
+    
+    <script src="JS/index.js"></script>  
+    
 </body>
 </html>
