@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>CASHIER PANEL</title>
 </head>
-<body>
+<body style="background-color:#C1C8E4">
     <header>
-        <nav class="navbar navbar-light fixed-top" style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-light fixed-top" style="background-color: #84CEEB;">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#"> <img id="logo" alt="Logo" src="img/logo.png" width="65" height="65"> <span><b>CASHIER PANEL</b></span> 
@@ -18,16 +18,16 @@
                     <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-home"></i></a></li> 
                     <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-envelope"></i></a></li>
                     <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-globe"></i></a></li>
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-sign-out"></i></a> </li>
                     <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-search"></i></a></li>
+                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-sign-out" onclick="SignOut()"></i></a> </li>                    
                 </ul>           
             </div>
         </nav>
     </header>
     
     <div class="row">
-        <div class="col-md-2" style="text-align:left">
-            <nav class="navbar navbar-dark bg-primary sidenav">
+        <div class="col-md-2 sidebar" style="text-align:left;"">
+            <nav class="navbar navbar-dark sidenav" style=" background-color: #5680E9;">
                 <div class="container">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link p-3" data-toggle="tab" href="#transactions"><i class="fa fa-exchange" style="font-size:21px"></i>Transactions</a></li>    
@@ -40,33 +40,39 @@
             <div id="transactions" class="tab-pane fade in active">
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="post">
-                            <p>
-                                <label for="itemCode">Item Code</label>
-                                <input type="text" readonly id="itemCode" name="itemCode" required value="" >
+                        <form class="container" action="post">
+                            <p class="row">
+                                <label class="col-md-3" for="itemCode">Item Code</label>
+                                <input class="col-md-6" type="text" readonly id="itemCode" name="itemCode" required value="" >
                             </p>
-                            <p>
-                                <label for="itemName">Item Name</label>
-                                <input type="text" readonly id="itemName" name="itemName" required value="" >
+                            <p class="row">
+                                <label class="col-md-3" for="itemName">Item Name</label>
+                                <input class="col-md-6" type="text" readonly id="itemName" name="itemName" required value="" >
                             </p>
-                            <p>
-                                <label for="itemPrice">Item Price</label>
-                                <input type="text" readonly id="itemPrice" name="itemPrice" required value="" >
+                            <p class="row">
+                                <label class="col-md-3" for="itemPrice">Item Price</label>
+                                <input class="col-md-6" type="text" readonly id="itemPrice" name="itemPrice" required value="" >
                             </p>
-                            <p>
-                                <label for="remainingQty">Remaining Quantity</label>
-                                <input type="text" readonly id="remainingQty" name="remainingQty" required value="" >
+                            <p class="row">
+                                <label class="col-md-3" for="remainingQty">Remaining Quantity</label>
+                                <input class="col-md-6" type="text" readonly id="remainingQty" name="remainingQty" value="" >
                             </p>
-                            <p>
-                                <label for="qty">Quantity</label>
-                                <input type="text" readonly id="qty" name="qty" required value="" >
+                            <p class="row">
+                                <label class="col-md-3" for="qty">Quantity</label>
+                                <input class="col-md-6" type="text" readonly id="qty" name="qty" required value="" >
                             </p>
                         </form>        
                     </div>
-                    <div class="col-md-6">
-                        <form action="post">
-    
-                        </form>
+                    <div class="container col-md-6">
+                        <table>
+                            <tr class="row">
+                                <td class="col-md-2">SELECT</td>
+                                <td class="col-md-3">ITEM CODE</td>
+                                <td class="col-md-3">ITEM NAME</td>
+                                <td class="col-md-3">QUANTITY</td>
+                                <td class="col-md-1">PRICE</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -85,9 +91,27 @@
         </div>
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCFgV_ID6n3BnIr4J1WhznAdB5iqjVm50Y",
+        authDomain: "pos-system-778dd.firebaseapp.com",
+        databaseURL: "https://pos-system-778dd.firebaseio.com",
+        projectId: "pos-system-778dd",
+        storageBucket: "pos-system-778dd.appspot.com",
+        messagingSenderId: "826306046330"
+    };
+    firebase.initializeApp(config);
+    </script>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="JS/index.js"></script>
+
 </body>
 </html>

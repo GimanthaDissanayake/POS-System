@@ -1,13 +1,15 @@
 {
-  "users" : [ {
-    "userId" : "1",
-    "username" : "admin",
-    "password" : "admin",
-    "type" : "admin"
+  "items" : [ {
+    "itemId" : "1",
+    "itemCode" : "12345",
+    "itemName" : "Pen",
+    "itemPrice" : "20.00",
+    "quantity" : "10"
   }, {
-    "userId" : "2",
-    "username" : "cashier",
-    "password" : "cashier",
-    "type" : "cashier"	
+    "itemId" : "2",
+    "itemCode" : "23456",
+    "itemName" : "Pencil",
+    "itemPrice" : "10.00",
+    "quantity" : "5"	
   }]
 }
