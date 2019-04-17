@@ -32,7 +32,7 @@ body{
     font-size: 35px;
 	  font-family: 'Anton', arial, serif; 
     color: #004d80;
-    background-color: #b3d9ff;
+    background-color: #84CEEB;
     font-weight: bold;
     border-bottom: 5px solid #004d80;
 }
@@ -46,14 +46,14 @@ body{
 	font-weight: 200;
 	display:inline-block;
 	vertical-align:middle;
-	padding:0 0 0 15px;
+  padding:0 0 0 15px;
 }
 
 /*Side Navigation Bar*/
 .sidenav{
   position: fixed;
   border-radius: 0;
-  height: 100%;
+  height: 80vh;
 }
 
 /*Footer*/
