@@ -18,9 +18,6 @@ function SignIn(){
         location.href="cashier.html";
       }
     }
-    else{
-      console.log("not logged in");
-    }
   });
 }
 
