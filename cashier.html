@@ -37,39 +37,46 @@
             </nav>
         </div>   
         <div class="col-md-10 tab-content">
-            <div id="transactions" class="tab-pane fade in active">
+            <div id="transactions" class="tab-pane active">
                 <div class="row">
                     <div class="col-md-6 container" style="margin:auto;">
-                        <form action="" style="margin:auto;" class="needs-validation" novalidate>
+                        
+                        
+                        <form id="displayForm" style="margin:auto;" class="needs-validation" novalidate>
 
-                      
+                            <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label">Item Id</label>
+                                <div class="col-sm-9">
+                                  <input type="text" class="form-control"  id="itemId" name="itemId" required >
+                                </div>
+                            </div>
 
 
                             <div class="form-group row">
-                              <label for="" class="col-sm-3 col-form-label">Item Name</label>
+                              <label class="col-sm-3 col-form-label">Item Code</label>
                               <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" required>
+                                <input type="text" class="form-control" id="itemCode" name="itemCode" required>
                               </div>
                             </div>
                             
                             <div class="form-group row">
-                              <label for="" class="col-sm-3 col-form-label">Item Price</label>
+                              <label for="" class="col-sm-3 col-form-label">Item Name</label>
                               <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" required>
+                                <input type="text" class="form-control" id="itemName" name="itemName" required>
                               </div>
                             </div>
       
                             <div class="form-group row">
-                              <label for="" class="col-sm-3 col-form-label">Remaining Quantity</label>
+                              <label for="" class="col-sm-3 col-form-label">Price</label>
                              <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" required>
+                                <input type="text" class="form-control" id="itemPrice" name="itemPrice" required>
                               </div>
                             </div>
                                   
                             <div class="form-group row">
                               <label for="" class="col-sm-3 col-form-label">Quantity</label>
                               <div class="col-sm-9">
-                                <input type="text" class="form-control" id="text" required>
+                                <input type="text" class="form-control" id="quantity" name="quantity" required>
                               </div>
                             </div>
       
@@ -77,61 +84,37 @@
                               <div class="col-sm-3">
                                   
                               </div>
+
                               <div class="col-sm-9">
                                 <button type="submit" class="btn btn-primary">Add Item</button>
-                                 <button type="submit" class="btn btn-light">Remove Item</button>
-                              </div>
-                             </div>
-      
-                             <div class="form-group row">
-                              <label for="" class="col-sm-3 col-form-label">Total Bill</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="" >
-                              </div>
-                            </div>
-      
-                            <div class="form-group row">
-                              <label for="" class="col-sm-3 col-form-label">Cash</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="">
-                              </div>
-                            </div>
-      
-                            <div class="form-group row">
-                              <label for="" class="col-sm-3 col-form-label">Balance</label>
-                             <div class="col-sm-9">
-                                <input type="text" class="form-control" id="">
-                              </div>
-                            </div>
-      
-                             <div class="form-group row">
-                              <div class="col-sm-3">
                                 
                               </div>
-                                <div class="col-sm-9">
-                                    <button type="submit" class="btn btn-primary">Generate  Bill</button>
-                              </div>
-                              </div>
-      
-      
-                                  
-      
-                          
+                             </div>   
                           </form>
                     </div>
+
+
                     <div class="container col-md-6">
-                        <table>
-                            <tr class="row">
-                                <td class="col-md-2">SELECT</td>
-                                <td class="col-md-3">ITEM CODE</td>
-                                <td class="col-md-3">ITEM NAME</td>
-                                <td class="col-md-3">QUANTITY</td>
-                                <td class="col-md-1">PRICE</td>
-                            </tr>
+                        <table class="table table-dark table-striped" style="border-radius: 5px;">
+                            <thead>
+                                <tr>
+                                    <td>Id</td>
+                                    <td>Code</td>
+                                    <td>Name</td>
+                                    <td>Price</td>
+                                    <td>Quantity</td>
+                                        
+                                </tr>     
+                            </thead>
+                            <tbody id="table_bdy">
+
+                            </tbody>
                         </table>
                     </div>
+
                 </div>
             </div>
+            
             <div id="customers" class="tab-pane fade">
                 <form action="" style="width:40%; margin:auto;" class="needs-validation" novalidate>
                     <div class="row">
@@ -175,6 +158,8 @@
         </div>
     </div>
 
+
+
     <footer>
         <div class="footer bottom">
             <p class="f1">©2019 - SUPERMARKET SYSTEM</p>
@@ -204,6 +189,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="JS/index.js"></script>
+    <script src="JS/main.js"></script>
     
     <script>
         var customerForm = document.querySelector('.needs-validation');
@@ -216,5 +202,10 @@
             customerForm.classList.add('was-validated');
         })
     </script>
+
+    
+    
+
+    
 </body>
 </html>
