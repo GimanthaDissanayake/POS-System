@@ -1,3 +1,4 @@
+/*
 //database reference
 var itemsRef = firebase.database().ref().child("Items");
 
@@ -43,3 +44,26 @@ itemsRef.on("child_added",snap=>{
     $('#table_bdy').append("<tr><td>"+itemId+"</td><td>"+itemCode+"</td><td>"+itemName+"</td><td>"+itemPrice+"</td><td>"+quantity+"</td></tr>");
 
 });
+*/
+
+//validate customer form
+var customerForm = document.querySelector("#cusForm");
+
+    customerForm.addEventListener('submit',function(event){
+        if(customerForm.checkValidity() === false){
+            event.preventDefault();
+            event.stopPropagation();
+        }
+    customerForm.classList.add('was-validated');
+    })
+
+//validate transaction form
+var transactionForm = document.querySelector("#transForm");
+
+transactionForm.addEventListener('submit',function(event){
+        if(transactionForm.checkValidity() === false){
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        transactionForm.classList.add('was-validated');
+    })    
