@@ -40,9 +40,7 @@
             <div id="transactions" class="tab-pane active">
                 <div class="row">
                     <div class="col-md-6 container" style="margin:auto;">
-                        
-                        
-                        <form id="displayForm" style="margin:auto;" class="needs-validation" novalidate>
+                        <form id="transForm" style="margin:auto;" class="needs-validation" novalidate>
 
                             <div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label">Item Id</label>
@@ -116,7 +114,7 @@
             </div>
             
             <div id="customers" class="tab-pane fade">
-                <form action="" style="width:40%; margin:auto;" class="needs-validation" novalidate>
+                <form action="" style="width:40%; margin:auto;" id="cusForm" class="needs-validation" novalidate>
                     <div class="row">
                         <div class="col-md">
                             <div class="form-group">
@@ -151,7 +149,7 @@
                         <input type="text" name="telephone" id="telephone" class="form-control" required>
                     </div>
                     <div class="form-group" style="text-align:center;">
-                        <button type="submit" class="btn btn-light">Save</button>
+                        <button type="submit" class="btn btn-light">Save Customer</button>
                     </div>                    
                 </form>
             </div>
@@ -192,15 +190,7 @@
     <script src="JS/main.js"></script>
     
     <script>
-        var customerForm = document.querySelector('.needs-validation');
-
-        customerForm.addEventListener('submit',function(event){
-            if(customerForm.checkValidity() === false){
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            customerForm.classList.add('was-validated');
-        })
+        
     </script>
 
     
