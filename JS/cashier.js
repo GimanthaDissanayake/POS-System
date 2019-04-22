@@ -1,5 +1,3 @@
-window.alert("hello2");
-
 //validate transaction form
 var transactionForm = document.querySelector("#transForm");
 
