@@ -30,22 +30,41 @@
             <nav class="navbar navbar-dark sidenav" style=" background-color: #5680E9;">
                 <div class="container">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link p-3" data-toggle="tab" href="#manageUsers"><i class="fa fa-exchange" style="font-size:21px"></i>  Manage Users</a></li>    
-                        <li class="nav-item"><a class="nav-link p-3" data-toggle="tab" href="#viewStock"><i class="fa fa-user-circle-o" style="font-size:21px"></i> View Stock</a></li>                           
-                        <li class="nav-item"><a class="nav-link p-3"><i class="fa fa-user-circle-o" style="font-size:21px"></i> Manage Stock</a></li>                            
-                        <li class="nav-item"><a class="nav-link p-3"><i class="fa fa-user-circle-o" style="font-size:21px"></i> Other</a></li>    
+                        <li class="nav-item"><a class="nav-link p-3" data-toggle="tab" href="#viewStock"><i class="fa fa-shopping-bag" style="font-size:21px"></i> View Stock</a></li>                           
+                        <li class="nav-item"><a class="nav-link p-3" data-toggle="tab" href="#manageStock"><i class="fa fa-cart-plus" style="font-size:21px"></i> Manage Stock</a></li>                            
+                        <li class="nav-item"><a class="nav-link p-3" data-toggle="tab" href="#promo"><i class="fa fa-gift" style="font-size:21px"></i> Promotions</a></li>    
                     </ul>
                 </div>        
             </nav>
         </div>   
         <div class="col-md-10 tab-content">
-            <div id="manageUsers" class="tab-pane fade in active">
-                <h3>HOME</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
             <div id="viewStock" class="tab-pane fade in active">
-                <h3>View Stock</h3>
-                <p>bhsadjkfhlkjdhfkjfhjfklhgfjkfj</p>
+                <div class="container">
+                    <h3>View Stock</h3><br>
+                    <table class="table table-light table-striped" style="border-radius: 5px;">
+                        <thead>
+                            <tr>
+                                <th scope="col">Code</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>                                
+                            </tr>     
+                        </thead>
+                        <tbody id="viewStockTbl">
+    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="manageStock" class="tab-pane fade">
+                <div class="container">
+                    <h3>Manage Stock</h3>            
+                </div>
+            </div>
+            <div id="promo" class="tab-pane fade">
+                <div class="container">
+                    <h3>Promotions</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -61,24 +80,14 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
-    <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyCFgV_ID6n3BnIr4J1WhznAdB5iqjVm50Y",
-        authDomain: "pos-system-778dd.firebaseapp.com",
-        databaseURL: "https://pos-system-778dd.firebaseio.com",
-        projectId: "pos-system-778dd",
-        storageBucket: "pos-system-778dd.appspot.com",
-        messagingSenderId: "826306046330"
-    };
-    firebase.initializeApp(config);
-    </script>
+    <script src="JS/main.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="JS/index.js"></script>
+    <script src="JS/admin.js"></script>
 
 </body>
 </html>
