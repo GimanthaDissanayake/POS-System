@@ -58,12 +58,97 @@
             </div>
             <div id="manageStock" class="tab-pane fade">
                 <div class="container">
-                    <h3>Manage Stock</h3>            
+                    <h3>Manage Stock</h3><br>     
+                    <nav class="navbar navbar-light bg-light">
+                        <div class="container-fluid">
+                            <ul class="nav navbar-nav flex-row">
+                                <li class="nav-item"><a class="nav-link p-2" data-toggle="tab" href="#addTo"><i class="fa fa-shopping-bag" style="font-size:21px"></i> Add To Stock</a></li>                           
+                                <li class="nav-item"><a class="nav-link p-2" data-toggle="tab" href="#addNew"><i class="fa fa-cart-plus" style="font-size:21px"></i> Add New Item</a></li>                            
+                                <li class="nav-item"><a class="nav-link p-2" data-toggle="tab" href="#remItem"><i class="fa fa-gift" style="font-size:21px"></i> Remove Item</a></li>    
+                            </ul>
+                        </div>        
+                    </nav>    
+                    <div class="tab-content">
+                        <div id="addTo" class="container tab-pane fade">
+                            <form action="" id="addToForm" class="needs-validation">
+                                <div class="form-group">
+                                    <label for="itemCode">Item Code</label>
+                                    <select name="itemCode" id="itemCode" class="form-control">
+                                        <option value="male">Male</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                        <label for="itemName">Item Name</label>
+                                        <input type="text" name="itemName" id="itemName" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="itemQty">Item Quantity</label>
+                                    <input type="text" name="itemQty" id="itemQty" class="form-control" required>
+                                </div>
+                                <div class="form-group" style="text-align:center;">
+                                        <button type="submit" class="btn btn-light">Add To Stock</button>
+                                </div> 
+                            </form>
+                        </div>
+                        <div id="addNew" class="container tab-pane fade">
+                            <form action="" id="addNewForm" class="needs-validation">
+                                <div class="form-group">
+                                    <label for="itemCode">Item Code</label>
+                                    <input type="text" name="itemCode" id="itemCode" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="itemName">Item Name</label>
+                                    <input type="text" name="itemName" id="itemName" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="itemQty">Item Quantity</label>
+                                    <input type="text" name="itemQty" id="itemQty" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="itemPrice">Item Price</label>
+                                    <input type="text" name="itemPrice" id="itemPrice" class="form-control" required>
+                                </div>
+                                <div class="form-group" style="text-align:center;">
+                                    <button type="submit" class="btn btn-light">Add Item</button>
+                                </div> 
+                            </form>
+                        </div>
+                        <div id="remItem" class="container tab-pane fade">
+                            <form action="" id="remItemForm" class="needs-validation">
+                                <div class="form-group">
+                                    <label for="itemCode">Item Code</label>
+                                    <select name="itemCode" id="itemCode" class="form-control">
+                                        <option value="male">Male</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="itemName">Item Name</label>
+                                    <input type="text" name="itemName" id="itemName" class="form-control" required>
+                                </div>
+                                <div class="form-group" style="text-align:center;">
+                                    <button type="submit" class="btn btn-light">Remove Item</button>
+                                </div> 
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="promo" class="tab-pane fade">
                 <div class="container">
                     <h3>Promotions</h3>
+                    <form action="" id="promo" class="needs-validation">
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" rows="10" id="message" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group" style="text-align:center;">
+                            <button type="submit" class="btn btn-light">Send To Customers</button>
+                        </div> 
+                    </form>
                 </div>
             </div>
         </div>
