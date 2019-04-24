@@ -1,6 +1,6 @@
 /*
 //database reference
-var itemsRef = firebase.database().ref().child("Items");
+// var itemsRef = firebase.database().ref().child("Items");
 
 document.getElementById('displayForm').addEventListener('submit', submitForm);
 
