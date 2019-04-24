@@ -86,7 +86,7 @@
                                     <input type="text" name="itemQty" id="itemQty" class="form-control" required>
                                 </div>
                                 <div class="form-group" style="text-align:center;">
-                                        <button type="submit" class="btn btn-light">Add</button>
+                                        <button type="submit" class="btn btn-light">Add To Stock</button>
                                 </div> 
                             </form>
                         </div>
@@ -109,7 +109,7 @@
                                     <input type="text" name="itemPrice" id="itemPrice" class="form-control" required>
                                 </div>
                                 <div class="form-group" style="text-align:center;">
-                                    <button type="submit" class="btn btn-light">Add</button>
+                                    <button type="submit" class="btn btn-light">Add Item</button>
                                 </div> 
                             </form>
                         </div>
@@ -125,6 +125,9 @@
                                     <label for="itemName">Item Name</label>
                                     <input type="text" name="itemName" id="itemName" class="form-control" required>
                                 </div>
+                                <div class="form-group" style="text-align:center;">
+                                    <button type="submit" class="btn btn-light">Remove Item</button>
+                                </div> 
                             </form>
                         </div>
                     </div>
@@ -133,6 +136,19 @@
             <div id="promo" class="tab-pane fade">
                 <div class="container">
                     <h3>Promotions</h3>
+                    <form action="" id="promo" class="needs-validation">
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" rows="10" id="message" class="form-control" required></textarea>
+                        </div>
+                        <div class="form-group" style="text-align:center;">
+                            <button type="submit" class="btn btn-light">Send To Customers</button>
+                        </div> 
+                    </form>
                 </div>
             </div>
         </div>
