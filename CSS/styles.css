@@ -2,7 +2,7 @@ body{
   margin: 0;
   padding: 0;
   padding-top: 90px;
-  overflow-y: hidden;
+
 }
 
 *{
@@ -32,14 +32,18 @@ body{
     padding: 5px 5px 5px 5px;
     font-size: 35px;
 	  font-family: 'Anton', arial, serif; 
-    color: #004d80;
+    color: black;
     background-color: #84CEEB;
     font-weight: bold;
     border-bottom: 5px solid #004d80;
 }
 
 #logo {
-	vertical-align:middle;
+  vertical-align:middle;
+  border-radius: 5px;
+  border: 1px solid blueviolet;
+  box-shadow: 0px 0px 10px 0px #000;
+
 }
 .navbar-brand span {
 	font-size:2rem;
