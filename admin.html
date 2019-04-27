@@ -73,8 +73,8 @@
                             <form action="" id="addToForm" class="needs-validation">
                                 <div class="form-group">
                                     <label for="itemCode">Item Code</label>
-                                    <select name="itemCode" id="itemCode" class="form-control">
-                                        <option value="male">Male</option>
+                                    <select type="text" class="form-control" id="itemCode" name="itemCode" onchange="loadDataToAdd()" required >
+                                        <option value="selectID"></option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -116,14 +116,14 @@
                         <div id="remItem" class="container tab-pane fade">
                             <form action="" id="remItemForm" class="needs-validation">
                                 <div class="form-group">
-                                    <label for="itemCode">Item Code</label>
-                                    <select name="itemCode" id="itemCode" class="form-control">
-                                        <option value="male">Male</option>
+                                    <label for="remitemCode">Item Code</label>
+                                    <select type="text" class="form-control" id="remitemCode" name="itemCode" onchange="loadDataToRemove()" required >
+                                        <option value="selectID"></option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="itemName">Item Name</label>
-                                    <input type="text" name="itemName" id="itemName" class="form-control" required>
+                                    <label for="remitemName">Item Name</label>
+                                    <input type="text" name="itemName" id="remitemName" class="form-control" required>
                                 </div>
                                 <div class="form-group" style="text-align:center;">
                                     <button type="submit" class="btn btn-light">Remove Item</button>
