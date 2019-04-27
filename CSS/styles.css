@@ -2,7 +2,6 @@ body{
   margin: 0;
   padding: 0;
   padding-top: 90px;
-
 }
 
 *{
@@ -29,13 +28,13 @@ body{
 
 /*Header*/
 .primary_header{
-    padding: 5px 5px 5px 5px;
-    font-size: 35px;
-	  font-family: 'Anton', arial, serif; 
-    color: black;
-    background-color: #84CEEB;
-    font-weight: bold;
-    border-bottom: 5px solid #004d80;
+  padding: 5px 5px 5px 5px;
+  font-size: 35px;
+	font-family: 'Anton', arial, serif; 
+  color: black;
+  background-color: #84CEEB;
+  font-weight: bold;
+  border-bottom: 5px solid #004d80;
 }
 
 #logo {

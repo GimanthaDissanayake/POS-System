@@ -10,14 +10,11 @@
 }
 
 /* cashier */
-
 .cashier_header{
-
 	padding: 5px 5px 0px 5px;
 	/*background-color: #0099ff;
 	color: white; */
 	box-shadow: 10px 10px 8px #0099ff;
-
 }
 
 .cashier_topic{
@@ -49,7 +46,7 @@ div p.cashier_header_time{
   padding: 5px 0;
   transition: all 0.3s ease;
   color: #0099ff;
-  font-size: 36px;
+  font-size: 45px;
 }
 
 .icon-bar a:hover {
@@ -57,9 +54,7 @@ div p.cashier_header_time{
   color: white;
 }
 
-
 /* side bar */
-
 .side1{
 	background-color: #004d80;
 	margin-top: 10px;
@@ -68,8 +63,6 @@ div p.cashier_header_time{
 
 .sidenav {
   height: 30%; 
-
- 
 }
 
 .sidenav a {
@@ -80,7 +73,6 @@ div p.cashier_header_time{
   display: block;
   font-weight: normal;
   box-shadow: 1px 1px 4px #000066;
- 
 }
 
 .sidenav a:hover {
@@ -90,7 +82,6 @@ div p.cashier_header_time{
 }
 
 /* main section */
-
 section.main{
 	width: 100%;
 	
