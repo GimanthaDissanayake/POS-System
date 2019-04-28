@@ -19,6 +19,7 @@ function submitForm(e){
 //reset form after submit
     document.getElementById('displayForm').reset();
 }
+
 //write data to firebase
 function saveForm(itemId,itemCode,itemName,itemPrice,quantity){
     var newItemsRef = itemsRef.push();
@@ -44,8 +45,8 @@ itemsRef.on("child_added",snap=>{
     $('#table_bdy').append("<tr><td>"+itemId+"</td><td>"+itemCode+"</td><td>"+itemName+"</td><td>"+itemPrice+"</td><td>"+quantity+"</td></tr>");
 
 });
-*/
 
+*/
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyCFgV_ID6n3BnIr4J1WhznAdB5iqjVm50Y",
@@ -58,4 +59,34 @@ var config = {
 firebase.initializeApp(config);
 
 
-    
+
+//database reference
+ var itemsRef = firebase.database().ref().child("Items");
+
+document.getElementById('dForm').addEventListener('submit', submitForm);
+
+//get data from form
+function submitForm(e){
+    e.preventDefault();
+
+
+    var itemCode = "sc003";
+    var itemName = "T-shirt";
+    var itemPrice = 1400;
+    var quantity = 78;
+
+    var newItemsRef = itemsRef.push();
+    newItemsRef.set({
+
+        itemCode: itemCode,
+        itemName: itemName,
+        itemPrice: itemPrice,
+        quantity: quantity
+      
+    })
+
+//reset form after submit
+    document.getElementById('displayForm').reset();
+}
+
+//write data to firebase

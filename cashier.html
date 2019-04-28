@@ -42,9 +42,11 @@
             <div id="transactions" class="tab-pane active">
                 <div class="row">
                     <div class="col-md-6 container" style="margin:auto; font-family: 'Concert One', cursive;font-size: 140%">
-
+                        <div class="alert alert-success fade-in" style="opacity: 0.5; color: saddlebrown">
+                            <p id="valid"></p>
+                        </div>
                 
-                        <form id="transForm" style="margin:auto;">
+                        <form id="transForm" style="margin:auto">
 
                             <div class="form-group row">
                               <label class="col-sm-3 col-form-label">Item Code</label>
@@ -193,9 +195,13 @@
             </div>
         </div>
     </div>
+    <form id="dForm"  style="display:none">
+        <button type="submit">heshan</button>
+        <p id="go" ></p>
 
 
-
+    </form>
+    
     <footer>
         <div class="footer bottom">
             <p class="f1">©2019 - SUPERMARKET SYSTEM</p>
@@ -216,6 +222,7 @@
     <script src="JS/index.js"></script>
     <script src="JS/cashier.js"></script>
     <script src="JS/calculations.js"></script>
+    <script src="JS/main.js"></script>
 
 </body>
 </html>
