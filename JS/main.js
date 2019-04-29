@@ -58,35 +58,3 @@ var config = {
     };
 firebase.initializeApp(config);
 
-
-
-//database reference
- var itemsRef = firebase.database().ref().child("Items");
-
-document.getElementById('dForm').addEventListener('submit', submitForm);
-
-//get data from form
-function submitForm(e){
-    e.preventDefault();
-
-
-    var itemCode = "sc003";
-    var itemName = "T-shirt";
-    var itemPrice = 1400;
-    var quantity = 78;
-
-    var newItemsRef = itemsRef.push();
-    newItemsRef.set({
-
-        itemCode: itemCode,
-        itemName: itemName,
-        itemPrice: itemPrice,
-        quantity: quantity
-      
-    })
-
-//reset form after submit
-    document.getElementById('displayForm').reset();
-}
-
-//write data to firebase
