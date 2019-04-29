@@ -15,20 +15,16 @@
                     <a class="navbar-brand" href="#"> <img id="logo" alt="Logo" src="img/logo.png" width="65" height="65"> <span style="font-family: 'Righteous', cursive; text-decoration: underline"><b><span style="color:blue; font-size: 150%">C</span>ASHIER <span style="color: blue; font-size: 150%">P</span>ANEL</b></span> 
                     </a>
                 </div> 
-                <ul class="navbar-nav flex-row" style="font-size:30px">
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-home"></i></a></li> 
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-envelope"></i></a></li>
-                    <li class="nav-item"><a class="nav-link p-2" href=""><i class="fa fa-globe"></i></a></li>
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-search"></i></a></li>
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-sign-out" onclick="SignOut()"></i></a> </li>                    
-                </ul>           
+                <div>
+                    <button href="#" class="button" style="box-shadow: 1px 2px 5px #000000; " onclick="SignOut()"><span><i class="fa fa-sign-out" ></i> Logout </span></button>
+                </div>           
             </div>
         </nav>
     </header>
     
     <div class="row">
         <div class="col-md-2 sidebar" style="text-align:left;">
-            <nav class="navbar navbar-dark sidenav" style=" background-color:brown;  font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 120%">
+            <nav class="navbar navbar-dark sidenav" style=" background-color: rgb(13, 24, 61); opacity: 0.8; font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 120%">
                 <div class="container">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link p-3" data-toggle="tab" href="#transactions"><i class="fa fa-exchange" style="font-size:20px"></i> Transactions</a></li>    
@@ -42,11 +38,11 @@
             <div id="transactions" class="tab-pane active">
                 <div class="row">
                     <div class="col-md-6 container" style="margin:auto; font-family: 'Concert One', cursive;font-size: 140%">
-                        <div class="alert alert-success fade-in" style="opacity: 0.5; color: saddlebrown">
+                        <div class="alert alert-success fade-in" id="validIt" style="opacity: 0.5; color: saddlebrown; ">
                             <p id="valid"></p>
                         </div>
                 
-                        <form id="transForm" style="margin:auto">
+                        <form id="transForm" style="margin:auto"> 
 
                             <div class="form-group row">
                               <label class="col-sm-3 col-form-label">Item Code</label>
@@ -86,9 +82,7 @@
                               </div>
       
                             <div class="form-group row">
-                                <div class="col-sm-3">
-                                  
-                                </div>
+                                <div class="col-sm-3"></div>
 
                                 <div class="col-sm-9">
                                     <button type="submit" style="width: 50%; float:right;   box-shadow: 0px 0px 10px 0px #000;" id="addItem" class="btn btn-warning">Add Item</button>

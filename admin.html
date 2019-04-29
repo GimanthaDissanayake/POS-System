@@ -5,29 +5,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>ADMIN PANEL</title>
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Righteous|Yanone+Kaffeesatz" rel="stylesheet">
 </head>
-<body style="background-color:#C1C8E4">
+<body style="background-image: url(img/back.jpg);">
     <header>
         <nav class="navbar navbar-light fixed-top" style="background-color: #84CEEB;">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#"> <img id="logo" alt="Logo" src="img/logo.png" width="65" height="65"> <span><b>ADMIN PANEL</b></span> 
+                    <a class="navbar-brand" href="#"> <img id="logo" alt="Logo" src="img/logo.png" width="65" height="65"> <span style="font-family: 'Righteous', cursive; text-decoration: underline"><b><span style="color:blue; font-size: 150%">A</span>DMIN <span style="color: blue; font-size: 150%">P</span>ANEL</b></span> 
                     </a>
                 </div> 
-                <ul class="navbar-nav flex-row" style="font-size:30px">
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-home"></i></a></li> 
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-envelope"></i></a></li>
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-globe"></i></a></li>
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-search"></i></a></li>
-                    <li class="nav-item"><a class="nav-link p-2" href="#"><i class="fa fa-sign-out" onclick="SignOut()"></i></a> </li>
-                </ul>           
+                <div>
+                    <button href="#" class="button" style="box-shadow: 1px 2px 5px #000000; " onclick="SignOut()"><span><i class="fa fa-sign-out" ></i> Logout </span></button>
+                </div>  
             </div>
         </nav>
     </header>
     
     <div class="row">
         <div class="col-md-2" style="text-align:left">
-            <nav class="navbar navbar-dark sidenav" style=" background-color: #5680E9;">
+            <nav class="navbar navbar-dark sidenav" style=" background-color: rgb(13, 24, 61); opacity: 0.8; font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 120%">
                 <div class="container">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link p-3" data-toggle="tab" href="#viewStock"><i class="fa fa-shopping-bag" style="font-size:21px"></i> View Stock</a></li>                           
@@ -41,7 +38,7 @@
             <div id="viewStock" class="tab-pane fade in active">
                 <div class="container">
                     <h3>View Stock</h3><br>
-                    <table class="table table-light table-striped" style="border-radius: 5px;">
+                    <table  class="table table-dark table-striped cashier_table" style="border-radius: 5px; opacity: 0.8;font-family: 'Concert One', cursive;font-size: 140%">
                         <thead>
                             <tr>
                                 <th scope="col">Code</th>
@@ -69,7 +66,7 @@
                         </div>        
                     </nav>    
                     <div class="tab-content">
-                        <div id="addTo" class="container tab-pane fade">
+                        <div id="addTo" class="container tab-pane fade"  style="margin:auto; font-family: 'Concert One', cursive;font-size: 140%">
                             <form action="" id="addToForm" class="needs-validation" novalidate>
                                 <div class="form-group">
                                     <label for="itemCode">Item Code</label>
@@ -90,7 +87,7 @@
                                 </div> 
                             </form>
                         </div>
-                        <div id="addNew" class="container tab-pane fade">
+                        <div id="addNew" class="container tab-pane fade"  style="margin:auto; font-family: 'Concert One', cursive;font-size: 140%">
                             <form action="" id="addNewForm" class="needs-validation" novalidate>
                                 <div class="form-group">
                                     <label for="newItemCode">Item Code</label>
@@ -113,7 +110,7 @@
                                 </div> 
                             </form>
                         </div>
-                        <div id="remItem" class="container tab-pane fade">
+                        <div id="remItem" class="container tab-pane fade"  style="margin:auto; font-family: 'Concert One', cursive;font-size: 140%">
                             <form action="" id="remItemForm" class="needs-validation">
                                 <div class="form-group">
                                     <label for="remitemCode">Item Code</label>
@@ -158,7 +155,7 @@
         <div class="footer bottom">
             <p class="f1">©2019 - SUPERMARKET SYSTEM</p>
             <p class="f2">ALL RIGHTS RESERVED</p>
-            <p class="f3">-CHALAKA KASTHURIARACHCHI- -HESHAN JAYASINGHE- -GIMANTHA DISSANAYAKE-</p>
+            <p class="f3" style="font-family: 'Righteous', cursive; font-size: 125%">-CHALAKA KASTHURIARACHCHI- -HESHAN JAYASINGHE- -GIMANTHA DISSANAYAKE-</p>
         </div>
     </footer>
 
