@@ -134,3 +134,41 @@ function removeItem(iCode,iName){
         firebase.database().ref("Items/" + data.key).remove();
     })   
 }  
+
+//validate promotions form
+var promoForm = document.querySelector("#promoFrm");
+
+    promoForm.addEventListener('submit',function(event){
+        if(promoForm.checkValidity() === false){
+            event.preventDefault();
+            event.stopPropagation();
+            promoForm.classList.add('was-validated');
+        }
+        else{
+            event.preventDefault();
+            var sub=document.getElementById('subject').value;
+            var msg=document.getElementById('message').value;
+            sendMail(sub,msg);
+            document.getElementById('promoFrm').reset();
+        }
+    })
+
+//send promotions
+function sendMail(sub,msg){
+    var ref = firebase.database().ref("Customer");
+    ref.on("value",function(snapshot){
+       snapshot.forEach(function(childSnapshot){
+           var childData=childSnapshot.val();
+           var cusEmail=childData.email;
+           Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "gimanthad@gmail.com",
+            Password : "60cdaef9-cd40-4eae-a8f0-a1e387624824",
+            To : cusEmail,
+            From : "gimanthad@gmail.com",
+            Subject : sub,
+            Body : msg
+        });
+       }); 
+    });
+}    
