@@ -38,9 +38,9 @@
             <div id="transactions" class="tab-pane active">
                 <div class="row">
                     <div class="col-md-6 container" style="margin:auto; font-family: 'Concert One', cursive;font-size: 140%">
-                        <div class="alert alert-success fade-in" id="validIt" style="opacity: 0.5; color: saddlebrown; ">
-                            <p id="valid"></p>
-                        </div>
+                        
+                            <p style="color:red" id="valid"></p>
+                        
                 
                         <form id="transForm" style="margin:auto"> 
 
@@ -77,7 +77,7 @@
                             <div class="form-group row">
                                 <label for="" class="col-sm-3 col-form-label">Quantity</label>
                                 <div class="col-sm-9">
-                                  <input type="text" class="form-control" id="newQuantity" name="newQuantity" required>
+                                  <input type="text" placeholder="Quantity" class="form-control" id="newQuantity" name="newQuantity" required>
                                 </div>
                               </div>
       
@@ -86,10 +86,10 @@
 
                                 <div class="col-sm-9">
                                     <button type="submit" style="width: 50%; float:right;   box-shadow: 0px 0px 10px 0px #000;" id="addItem" class="btn btn-warning">Add Item</button>
-                                
                                 </div>
                             </div>   
                           </form>
+                          
 
                           <form id="billCalculate">
                                 <div class="form-group row">
@@ -102,7 +102,7 @@
                                 <div class="form-group row">
                                         <label for="" class="col-sm-3 col-form-label">Cash</label>
                                         <div class="col-sm-9">
-                                          <input type="text" class="form-control" id="cash" name="cash" required>
+                                          <input type="text" placeholder="Cash" class="form-control" id="cash" name="cash" required>
                                         </div>
                                 </div>
 
@@ -120,6 +120,7 @@
         
                                         <div class="col-sm-9">
                                             <button type="submit" style="float: right; width: 50%;  box-shadow: 0px 0px 10px 0px #000;" class="btn btn-dark">Generate Bill</button>
+                                            <button value="Refresh Page" style="float: right; width: 50%;  box-shadow: 0px 0px 10px 0px #000;" class="btn btn-warning" onClick="window.location.reload();">Finish Transection</button>
                                         </div>
                                 </div>   
 
@@ -129,7 +130,7 @@
 
                     <div class="container col-md-6">
                         <table class="table table-dark table-striped cashier_table" style="border-radius: 5px; opacity: 0.8;font-family: 'Concert One', cursive;font-size: 140%">
-                            <thead>
+                            <thead id='tbh'>
                                 <tr>
                                     <th>Code</th>
                                     <th>Name</th>

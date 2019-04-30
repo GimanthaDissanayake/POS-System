@@ -48,22 +48,30 @@ function addItem(e){
     var nItemName = document.getElementById('itemName').value;
     var nItemPrice = document.getElementById('itemPrice').value;
     var nnewQuantity = document.getElementById('newQuantity').value;
- 
-    //update remaining items
+    
+    if(isNaN(nnewQuantity)){
+        formError='&#9746 Quantity must be a number';
+        document.getElementById('valid').innerHTML= formError;
+        document.getElementById('newQuantity').value='';
+    }else{
+            //update remaining items
     var y = document.getElementById('itemCode').value;
     itemsRef.orderByChild("itemCode").equalTo(y).on("child_added", function(snapshot) {
         qty=document.getElementById('go').innerHTML;
         var path = snapshot.key;
         var updatedRemQuantity = qty - nnewQuantity;
         if(updatedRemQuantity < 0){
-            formError = 'Not enough items left';
+            formError = '&#9746 Not enough items left';
             document.getElementById('valid').innerHTML = formError;
 
             //reset form
             document.getElementById('transForm').reset();
         }else{
-            formError = 'Item added to cart';
+            formError = '&#9745 Item added to cart';
             document.getElementById('valid').innerHTML = formError;
+          
+            document.getElementById('transForm').reset();
+            
 
             firebase.database().ref("Items/" + path).update({ quantity: updatedRemQuantity });
 
@@ -75,7 +83,7 @@ function addItem(e){
 
             //load table
             $('#table_bdy').append("<tr><td>"+nItemCode+"</td><td>"+nItemName+"</td><td>"+nItemPrice+"</td><td>"+nnewQuantity+"</td></tr>");
-
+         
             //calculate total price
             var newItemPrice = parseInt(nItemPrice);
             var trueValue = nnewQuantity * newItemPrice;
@@ -83,10 +91,13 @@ function addItem(e){
             document.getElementById('totalBill').value=totPrice;
 
             //reset form
-            document.getElementById('transForm').reset();
+            //document.getElementById('transForm').reset();
             }    
         }
     });   
+    }
+
+    
 }
 
 function generateBill(e){
@@ -95,6 +106,46 @@ function generateBill(e){
     //load total price
     var newTotal = document.getElementById('totalBill').value;
     var cash = document.getElementById('cash').value;
-    var balance = cash - newTotal;
-    document.getElementById('balance').value= balance;
+    if(isNaN(cash)){
+        formError='not a number';
+        document.getElementById('valid').innerHTML = formError;
+        document.getElementById('balance').value= 'cash must be a number !!';
+    }else{
+        var balance = cash - newTotal;
+        document.getElementById('balance').value= balance;
+        if(balance >= 0 ){
+            formError = '&#9745 Transection successfull...';
+            document.getElementById('valid').innerHTML = formError;
+            document.getElementById('billCalculate').reset();
+            document.getElementById('balance').value=balance;
+    
+        }else{
+            formError = 'Cash not enough';
+            document.getElementById('balance').value= '&#9746 cash not enough';
+            document.getElementById('valid').innerHTML = formError;
+        }
+    } 
+     
+    //print bill
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+    var generator = window.open(",'tbl',");
+    var layertext1 = document.getElementById('tbh');
+    var layertext2 = document.getElementById('table_bdy');
+    generator.document.write(dateTime);
+    generator.document.write('<br>=====================<br><strong>Ruh Shop Sri Lanka</strong><br>=====================<br>');
+    generator.document.write(layertext1.innerHTML);
+    generator.document.write('<br>'+layertext2.innerHTML);
+    generator.document.write("<br>Total price : "+totPrice+"<br>");
+    generator.document.write("Cash        : "+cash+"<br>");
+    generator.document.write("Balance     : "+balance+"<br><br>");
+    generator.document.write("=====================<br>");
+    generator.document.write("Thank you...Come again !!!");
+    generator.document.close();
+    generator.print();
+    generator.close();
+    
 }
