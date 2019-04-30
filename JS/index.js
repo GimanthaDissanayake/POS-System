@@ -1,8 +1,9 @@
 var database=firebase.database();
-
+var txtuser="";
+var txtpass="";
 function SignIn(){
-  var txtuser=document.getElementById('username').value+"@pos-system-778dd.appspot.com";
-  var txtpass=document.getElementById('password').value;
+  txtuser=document.getElementById('username').value+"@pos-system-778dd.appspot.com";
+  txtpass=document.getElementById('password').value;
 
   firebase.auth().signInWithEmailAndPassword(txtuser, txtpass).catch(function(error) {
     window.alert(error.message)
