@@ -16,7 +16,7 @@ table{
 
 /*Sign in Page Background*/
 .bg{
-  background: url(../CSS/resources/login_background.jpg) no-repeat;
+  background: url(../img/login_background.jpg) no-repeat;
   width: 100%;
   height: 80vh;
   background-size: cover;
