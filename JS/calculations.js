@@ -68,10 +68,7 @@ function addItem(e){
             document.getElementById('transForm').reset();
         }else{
             formError = '&#9745 Item added to cart';
-            document.getElementById('valid').innerHTML = formError;
-          
-            document.getElementById('transForm').reset();
-            
+            document.getElementById('valid').innerHTML = formError;            
 
             firebase.database().ref("Items/" + path).update({ quantity: updatedRemQuantity });
 
@@ -91,13 +88,11 @@ function addItem(e){
             document.getElementById('totalBill').value=totPrice;
 
             //reset form
-            //document.getElementById('transForm').reset();
+            document.getElementById('transForm').reset();
             }    
         }
     });   
-    }
-
-    
+    }    
 }
 
 function generateBill(e){
