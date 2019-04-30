@@ -124,7 +124,28 @@ function generateBill(e){
             document.getElementById('balance').value= '&#9746 cash not enough';
             document.getElementById('valid').innerHTML = formError;
         }
-    }
-    
+    } 
+     
+    //print bill
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+    var generator = window.open(",'tbl',");
+    var layertext1 = document.getElementById('tbh');
+    var layertext2 = document.getElementById('table_bdy');
+    generator.document.write(dateTime);
+    generator.document.write('<br>=====================<br><strong>Ruh Shop Sri Lanka</strong><br>=====================<br>');
+    generator.document.write(layertext1.innerHTML);
+    generator.document.write('<br>'+layertext2.innerHTML);
+    generator.document.write("<br>Total price : "+totPrice+"<br>");
+    generator.document.write("Cash        : "+cash+"<br>");
+    generator.document.write("Balance     : "+balance+"<br><br>");
+    generator.document.write("=====================<br>");
+    generator.document.write("Thank you...Come again !!!");
+    generator.document.close();
+    generator.print();
+    generator.close();
     
 }
