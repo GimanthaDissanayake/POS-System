@@ -1,4 +1,7 @@
 # POS-System
+
+[![GitHub followers](https://img.shields.io/github/followers/espadrine.svg?label=Follow&style=social)](https://github.com/GimanthaDissanayake)
+
 This is a simple POS System developed using bootstrap and firebase. This was developed a project and is fully functional with some minor bugs. It can handle inventory control and also sales activities.
 
 ## Getting Started
