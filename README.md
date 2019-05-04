@@ -18,6 +18,7 @@ Clone the repo as a git clone or any other refered method.
 
 ## Authors
 
-* **Author/Authors names** - *Initial work* - [Gimantha Dissanayake](https://github.com/GimanthaDissanayake)
-
+* *Initial work* - [Gimantha Dissanayake](https://github.com/GimanthaDissanayake)
+                 - [Heshan Jayasinghe](https://github.com/heshancs) 
+                 
 See also the list of [contributors](https://github.com/GimanthaDissanayake/POS-System/graphs/contributors) who participated in this project.
